@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrasi Event / Organisasi</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Event And Organization Registration Form</h1>
+        <div class="toggle-mode" onclick="toggleMode()" id="modeIcon">🌙</div>
+      </div>
+
+      <div class="registration-wrapper">
+        <!-- FORM -->
+        <div class="form-card">
+          <h2>Registation Form</h2>
+
+          <form id="registrationForm">
+            <input type="hidden" id="editIndex" />
+
+            <input type="text" id="name" placeholder="Nama Lengkap" required />
+
+            <textarea id="address" placeholder="Alamat" required></textarea>
+
+            <input
+              type="text"
+              id="phone"
+              placeholder="Nomor Telepon (628xxx)"
+              required
+            />
+
+            <input
+              type="text"
+              id="school"
+              placeholder="Asal Sekolah"
+              required
+            />
+
+            <label name="photo">Upload Foto</label>
+            <input type="file" id="photo" accept="image/*" />
+
+            <button type="submit">Simpan Data</button>
+          </form>
+        </div>
+
+        <!-- EVENT -->
+        <div class="event-card">
+          <img src="images/event.jpg" alt="Flyer Event" />
+        </div>
+      </div>
+
+      <!-- PESERTA -->
+      <div class="card">
+        <h2>list Of Participants</h2>
+        <div class="participants" id="participantsList"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
