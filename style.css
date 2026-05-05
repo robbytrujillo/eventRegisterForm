@@ -1,239 +1,237 @@
-<style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-      :root {
-        --primary: #2447f9;
-        --bg: #f6f8fd;
-        --card: #ffffff;
-        --text: #1e1e1e;
-      }
+:root {
+  --primary: #2447f9;
+  --bg: #f6f8fd;
+  --card: #ffffff;
+  --text: #1e1e1e;
+}
 
-      body.dark {
-        --bg: #121212;
-        --card: #1e1e1e;
-        --text: #ffffff;
-      }
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+}
 
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-      body {
-        background: var(--bg);
-        color: var(--text);
-        transition: 0.3s;
-      }
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
 
-      .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 20px;
-      }
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
 
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-      }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
-      .toggle-mode {
-        font-size: 24px;
-        cursor: pointer;
-        background: var(--card);
-        padding: 10px 15px;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
+.toggle-mode {
+  font-size: 24px;
+  cursor: pointer;
+  background: var(--card);
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-      h1,
-      h2 {
-        margin-bottom: 20px;
-      }
+h1,
+h2 {
+  margin-bottom: 20px;
+}
 
-      .card {
-        background: var(--card);
-        padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        margin-bottom: 30px;
-      }
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
 
-      /* WRAPPER */
-      .registration-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: stretch;
-        max-width: 1100px;
-        margin: 0 auto 30px;
-      }
+/* WRAPPER */
+.registration-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
 
-      /* FORM + EVENT */
-      .form-card,
-      .event-card {
-        width: 100%;
-        min-height: 720px;
-        background: var(--card);
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      }
+/* FORM + EVENT */
+.form-card,
+.event-card {
+  width: 100%;
+  min-height: 720px;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
 
-      .form-card {
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
+.form-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-      .event-card {
-        padding: 0;
-        overflow: hidden;
-        display: flex;
-      }
+.event-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+}
 
-      .event-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-      form {
-        display: grid;
-        gap: 18px;
-      }
+form {
+  display: grid;
+  gap: 18px;
+}
 
-      input,
-      textarea {
-        padding: 14px;
-        border: 1px solid #ccc;
-        border-radius: 14px;
-        width: 100%;
-        font-size: 15px;
-        outline: none;
-      }
+input,
+textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  width: 100%;
+  font-size: 15px;
+  outline: none;
+}
 
-      textarea {
-        min-height: 90px;
-        resize: vertical;
-      }
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
 
-      button {
-        background: var(--primary);
-        color: white;
-        padding: 14px;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 16px;
-        transition: 0.3s;
-      }
+button {
+  background: var(--primary);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
 
-      button:hover {
-        opacity: 0.9;
-      }
+button:hover {
+  opacity: 0.9;
+}
 
-      /* PARTICIPANTS */
-      .participants {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
+/* PARTICIPANTS */
+.participants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
 
-      .participant-card {
-        background: var(--card);
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        text-align: center;
-      }
+.participant-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
 
-      .participant-card img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        margin-bottom: 15px;
-      }
+.participant-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
 
-      .actions {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 15px;
-      }
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
 
-      .actions a,
-      .actions button {
-        padding: 8px 14px;
-        text-decoration: none;
-        border-radius: 30px;
-        font-size: 14px;
-        border: none;
-        cursor: pointer;
-      }
+.actions a,
+.actions button {
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
 
-      .wa-btn {
-        background: green;
-        color: white;
-      }
+.wa-btn {
+  background: green;
+  color: white;
+}
 
-      .edit-btn {
-        background: orange;
-        color: white;
-      }
+.edit-btn {
+  background: orange;
+  color: white;
+}
 
-      .delete-btn {
-        background: red;
-        color: white;
-      }
+.delete-btn {
+  background: red;
+  color: white;
+}
 
-      /* RESPONSIVE */
-      @media (max-width: 992px) {
-        .container {
-          max-width: 95%;
-          padding: 15px;
-        }
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .container {
+    max-width: 95%;
+    padding: 15px;
+  }
 
-        .registration-wrapper {
-          grid-template-columns: 1fr;
-        }
+  .registration-wrapper {
+    grid-template-columns: 1fr;
+  }
 
-        .form-card,
-        .event-card {
-          min-height: auto;
-        }
+  .form-card,
+  .event-card {
+    min-height: auto;
+  }
 
-        .event-card img {
-          max-height: 650px;
-        }
-      }
+  .event-card img {
+    max-height: 650px;
+  }
+}
 
-      @media (max-width: 768px) {
-        .container {
-          max-width: 100%;
-          padding: 10px;
-        }
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
 
-        .header {
-          flex-direction: column;
-          gap: 15px;
-          text-align: center;
-        }
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
 
-        .form-card {
-          padding: 25px;
-        }
+  .form-card {
+    padding: 25px;
+  }
 
-        .event-card img {
-          max-height: 500px;
-        }
-      }
-    </style>
+  .event-card img {
+    max-height: 500px;
+  }
+}
